@@ -74,6 +74,7 @@ html {
     top:350px;
     width:67%;
     margin: 0 auto;
+    padding-bottom: 50px;
 }
 
 .home-column-item {
@@ -132,6 +133,7 @@ html {
     top:248px;
     width:80%;
     margin: 0 auto;
+    padding-bottom: 50px;
 }
 
 .about-column-item {
@@ -167,58 +169,41 @@ html {
     border: solid 2px whitesmoke;
 }
 
-.about-column-item:not(:last-child):after {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: -25px;
-    height:90%;
-    margin: auto 0;
-    width: 1px;
-    background-color: white;
-}
+
 /* END ABOUT PAGE */
 
-/* PROJECTS PAGE */
+/*WEB PROJECTS PAGE */
 #projects-container {
     display:flex;
-    flex-direction:column;
     position:relative;
-    top:180px;
-    width:100%;
-    margin: 0 auto;
-    text-align:center;
-}
-
-#projects-title {
-    font-size:72px;
-    color:white;
-    margin-bottom:25px;
-}
-
-#projects-column-container {
-    display:flex;
-    position:relative;
-    width:85%;
+    top:80px;
+    width:80%;
     margin: 0 auto;
 }
 
-.projects-column-item {
+.projects-container-item {
+    flex:1;
     display:flex;
+    justify-content:flex-start;
+    text-align: center;
+    align-items:center;
     position:relative;
-    margin: 0 75px;
     flex-direction: column;
-    text-align:center;
 }
-
-.projects-column-item img {
-    max-width:100%;
-    margin-bottom:10px;
-}
-
-.projects-column-item p {
+.projects-container-item h1 {
+    display: inline-block;
+    padding: 0 20px 3px 20px;
+    border-bottom: 5px solid white;
+    font-size:60px;
     color:white;
-    font-size:20px;
 }
+
+.projects-container-item a {
+    text-decoration:none;
+    color:gold;
+    font-size:26px;
+    margin-top:25px;
+}
+
+
 /* END PROJECTS PAGE */
