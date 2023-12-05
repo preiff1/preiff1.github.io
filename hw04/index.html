@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <title>Oktoberfest in Munich 2023</title>
+    </head>
+
+    <!-- 
+        Disclaimer: This page is a crude recreation of the official Oktoberfest München Welcome page. I do not claim any of the images or content displayed 
+        in this page to be mine. The use of images, contents, and the general recreation of this page falls under private use. All rights reserved to the 
+        owner(s) and author(s) of the original web pages.
+    -->
+  
+    <body>
+        <header>
+            <div id="page-header">
+                <div id="page-header-top">
+                    <img src="images/ofest-logo.svg"
+                    width="180" 
+                    style="margin-left:55px"
+                    alt="oktoberfest munchen official logo">
+                </div>  
+                
+                <div>
+                    <nav>
+                        <ul>
+                            <li><a href="index.html">Home</a>
+                            </li>
+                            <li>
+                                <div id="add-dropdown"
+                                onclick="toggleMenu()">
+                                    <p>Information</p>
+                                    <img src="images/dropdown-1.svg"
+                                    id="add-dropdown-icon"
+                                    alt="info dropdown menu caret">
+                                </div>
+                            </li>
+                        </ul>
+    
+                        <div id="info-menu-wrapper">
+                            <div id="info-dropdown-header">
+                                <h2>Information</h2>
+                            </div>
+                                
+                            <a href="schedule.html" class="info-dropdown-content">
+                                <p>Schedule</p>
+                            </a>
+    
+                            <a href="committee.html" class="info-dropdown-content">
+                                <p>Imprint</p>
+                            </a> 
+                        </div>
+                    </nav>
+                </div>
+    
+                <script>
+                    let infoMenu = document.getElementById("info-menu-wrapper");
+                    let infoCaret = document.getElementById("add-dropdown-icon");
+        
+                    function toggleMenu() {
+                        infoMenu.classList.toggle("open-menu");
+                        infoCaret.classList.toggle("flip-image");
+                    }
+                </script>
+            </div>
+        </header>
+    
+        <main>
+            <article>
+                <div>
+                    <h2 id="home-title">
+                        The unofficial site for the 188th Oktoberfest
+                        from <time datetime="2023-09-16">September 16</time> to <time datetime="2023-10-03">October 3, 2023</time>
+                    </h2>
+                </div>
+            </article>
+    
+            <section>
+                <div>
+                    <h3 id="home-summary-text">
+                        The Oktoberfest is the largest folk festival in the world, a unique synthesis of the arts, a piece of Munich's soul. 
+                        It is tradition that customs and the Bavarian way of life experience a lively renewal here in particular. 
+                        The Oktoberfest stands for a sense of home and the hospitality of the people of Munich - a funfair for everyone, with a 
+                        variety of pleasurable moments for all the senses at the highest level of quality. The brand essence of the Oktoberfest 
+                        stands for encounters, shared experiences and the joy of life.
+                    </h3>
+                </div>
+            </section>
+
+            <div id="wrap-home-image">
+                <img src="images/okt_img.jpeg"
+                alt="oktoberfest festival photo from the official website">
+            </div>    
+        </main>
+        
+    
+        <footer>
+            <div id="page-footer">
+                <p id="page-footer-text">
+                    I do not own the rights to any images or information contained in this page. All rights reserved to the owner(s) and author(s)
+                    of the original website:
+                </p> 
+                <a href="https://www.oktoberfest.de/en">The OFFICIAL Oktoberfest München website</a> 
+                <p id="copyright-text">- &copy; 2023 Landeshauptstadt München</p>
+            </div>
+        </footer>
+    </body>

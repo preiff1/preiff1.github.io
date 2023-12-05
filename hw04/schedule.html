@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <title> Daily Schedules - Oktoberfest München</title>
+    </head>
+
+    <!-- 
+        Disclaimer: This page is a crude recreation of the official Oktoberfest München Impact page. I do not claim any of the images or content displayed 
+        in this page to be mine. The use of images, contents, and the general recreation of this page falls under private use. All rights reserved to the 
+        owner(s) and author(s) of the original web pages.
+    --> 
+
+    <body>
+        <header>
+            <div id="page-header">
+                <div id="page-header-top">
+                    <img src="images/ofest-logo.svg"
+                    width="180" 
+                    style="margin-left:55px"
+                    alt="oktoberfest münchen official logo"> 
+                </div>  
+                
+                <div>
+                    <nav>
+                        <ul>
+                            <li><a href="index.html">Home</a>
+                            </li>
+                            <li>
+                                <div id="add-dropdown"
+                                onclick="toggleMenu()">
+                                    <p>Information</p>
+                                    <img src="images/dropdown-1.svg"
+                                    id="add-dropdown-icon"
+                                    alt="info dropdown menu caret">
+                                </div>
+                            </li>
+                        </ul>
+    
+                        <div id="info-menu-wrapper">
+                            <div id="info-dropdown-header">
+                                <h2>Information</h2>
+                            </div>
+                                
+                            <a href="schedule.html" class="info-dropdown-content">
+                                <p>Schedule</p>
+                            </a>
+    
+                            <a href="committee.html" class="info-dropdown-content">
+                                <p>Imprint</p>
+                            </a> 
+                        </div>
+                    </nav>
+                </div>
+    
+                <script>
+                    let infoMenu = document.getElementById("info-menu-wrapper");
+                    let infoCaret = document.getElementById("add-dropdown-icon");
+        
+                    function toggleMenu() {
+                        infoMenu.classList.toggle("open-menu");
+                        infoCaret.classList.toggle("flip-image");
+                    }
+                </script>
+            </div>
+        </header>
+    
+        <main>
+            <article>
+                <div>
+                    <h2 id="table-title">
+                        Daily Activities & Hours
+                    </h2>
+                </div>
+            </article>
+
+                <div>
+                    <table id="event-table">
+                        <tr>
+                            <th>
+                                <div>Beer Tents</div>
+                                <div>(serving alcohol)</div>
+                            </th>
+                            <th>
+                                <div>The Stalls</div>
+                                <div>(serving food)</div>
+                            </th>
+                            <th>
+                                <div>Rides &</div>
+                                <div>Showmen</div>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>Mon-Fri: <time datetime="10:00">10 AM</time> - <time datetime="23:30">11:30 PM</time></td>
+                            <td>Mon-Thurs: <time datetime="10:00">10 AM</time> - <time datetime="23:30">11:30 PM</time> </td>
+                            <td>Mon-Thurs: <time datetime="10:00">10 AM</time> - <time datetime="23:30">11:30 PM</time> </td>
+                        </tr>
+                        <tr>
+                            <td>Sat-Sun: <time datetime="09:00">9 AM</time> - <time datetime="23:30">11:30 PM</time></td>
+                            <td>Fri: <time datetime="10:00">10 AM</time> - <time datetime="00:00">12 AM</time></td>
+                            <td>Fri: <time datetime="10:00">10 AM</time> - <time datetime="00:00">12 AM</time></td>
+                        </tr>
+                        <tr>
+                            <td>-</td>
+                            <td>Sat: <time datetime="09:00">9 AM</time> - <time datetime="00:00">12 AM</time></td>
+                            <td>Sat: <time datetime="09:00">9 AM</time> - <time datetime="00:00">12 AM</time></td>
+                        </tr>
+                        <tr>
+                            <td>-</td>
+                            <td>Sun: <time datetime="09:00">9 AM</time> - <time datetime="23:30">11:30 PM</time></td>
+                            <td>Sun: <time datetime="10:00">10 AM</time> - <time datetime="23:30">11:30 PM</time></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div>
+                    <p id="schedule-disclaimer">
+                        * The Oktoberfest celebration is ongoing from September 16th to October 3rd. Event hours are modified for certain dates of the celebration.
+                        Please see below.
+                    </p>
+                </div>
+
+            <section>
+                <div class="schedule-info">
+                    <h3 style="font-family: Noto Sans Bold"> The first day, September 16th:</h3>
+                    <ul class="updated-hours-list">
+                        <li>
+                            Beer tents open at <time datetime="09:00">9 AM</time>, 
+                            serving non-alcoholic beverages at <time datetime="10:00">10 AM</time>, 
+                            then serving alcohol at <time datetime="12:00">noon</time>. Tents close at 11:30PM.
+                        </li>
+                        <li>
+                            The stalls open at <time datetime="09:00">9 AM</time> and close at <time datetime="00:00">midnight</time>.
+                        </li>
+                        <li>
+                            Fairground rides and showmen open at <time datetime="12:00">noon</time> and close at <time datetime="00:00">midnight</time>.
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="schedule-info">
+                    <h3 style="font-family: Noto Sans Bold">Monday, October 2nd:</h3>
+                    <ul class="updated-hours-list">
+                        <li>Beer tents are open and serving alcohol during regular Monday hours.</li>
+                        <li>
+                            The stalls open at <time datetime="10:00">10 AM</time> AM and close at <time datetime="00:00">midnight</time>.
+                        </li>
+                        <li>
+                            Fairground rides and showmen open at <time datetime="10:00">10 AM</time> and close at <time datetime="00:00">midnight</time>.
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="schedule-info">
+                    <h3 style="font-family: Noto Sans Bold">
+                        The Holiday, October 3rd:
+                    </h3>
+                    <ul class="updated-hours-list">
+                        <li>
+                            The beer tents are open and serving alcohol from <time datetime="09:00">9 AM</time> to <time datetime="23:30">11:30 PM</time>.
+                        </li>
+                        <li>
+                            The stalls open at <time datetime="09:00">9 AM</time> and close at <time datetime="23:30">11:30 PM</time>.
+                        </li>
+                        <li>Fairground rides and showmen functioning during regular Tuesday hours.</li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+        
+    
+        <footer>
+            <div id="page-footer">
+                <p id="page-footer-text">
+                    I do not own the rights to any images or information contained in this page. All rights reserved to the owner(s) and author(s)
+                    of the original website:
+                </p> 
+                <a href="https://www.oktoberfest.de/en">The OFFICIAL Oktoberfest München website</a> 
+                <p id="copyright-text"> - &copy; 2023 Landeshauptstadt München</p>
+            </div>
+        </footer>
+
+    </body>

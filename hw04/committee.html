@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <title>Imprint - Oktoberfest München</title>
+    </head>
+
+    <!-- 
+        Disclaimer: This page is a crude recreation of the official Oktoberfest München Impact page. I do not claim any of the images or content displayed 
+        in this page to be mine. The use of images, contents, and the general recreation of this page falls under private use. All rights reserved to the 
+        owner(s) and author(s) of the original web pages.
+    --> 
+
+    <body>
+        <header>
+            <div id="page-header">
+                <div id="page-header-top">
+                    <img src="images/ofest-logo.svg"
+                    width="180" 
+                    style="margin-left:55px"
+                    alt="oktoberfest münchen official logo"> 
+                </div>  
+                
+                <div>
+                    <nav>
+                        <ul>
+                            <li><a href="index.html">Home</a>
+                            </li>
+                            <li>
+                                <div id="add-dropdown"
+                                onclick="toggleMenu()">
+                                    <p>Information</p>
+                                    <img src="images/dropdown-1.svg"
+                                    id="add-dropdown-icon"
+                                    alt="info dropdown menu caret">
+                                </div>
+                            </li>
+                        </ul>
+    
+                        <div id="info-menu-wrapper">
+                            <div id="info-dropdown-header">
+                                <h2>Information</h2>
+                            </div>
+                                
+                            <a href="schedule.html" class="info-dropdown-content">
+                                <p>Schedule</p>
+                            </a>
+    
+                            <a href="committee.html" class="info-dropdown-content">
+                                <p>Imprint</p>
+                            </a> 
+                        </div>
+                    </nav>
+                </div>
+    
+                <script>
+                    let infoMenu = document.getElementById("info-menu-wrapper");
+                    let infoCaret = document.getElementById("add-dropdown-icon");
+        
+                    function toggleMenu() {
+                        infoMenu.classList.toggle("open-menu");
+                        infoCaret.classList.toggle("flip-image");
+                    }
+                </script>
+            </div>
+        </header>
+    
+        <main>
+            <article>
+                <div>
+                    <h2 id="imprint-title">
+                        Imprint
+                    </h2>
+                </div>
+            </article>
+
+            <section>
+                <div>
+                    <div class="imprint-info">
+                        <h3 style="font-family: Noto Sans Bold">City of Munich</h3>
+                        <p>Department for Labor and Economy</p>
+                        <p>Events</p>
+                        <p>80331 Munich</p>
+                        <p>E-mail: veranstaltungen.raw@muenchen.de</p>
+                        <p>Telephone: +49 89 233 82813</p>
+                    </div>
+                        
+                    <div class="imprint-info">
+                        <h3 style="font-family: Noto Sans Bold">Authorized representative:</h3>
+                        <p>Clemens Baumgärtner Department of Labor and Economic Affairs</p>
+                        <p>E-mail: business@muenchen.de</p>
+                    </div>    
+    
+                    <div class="imprint-info">
+                        <h3 style="font-family: Noto Sans Bold">Corporation under public law</h3>
+                        <p>Sales tax identification number DE 129 524 000</p>
+                        <p>Competent supervisory authority: Government of Upper Bavaria</p>
+                    </div>  
+    
+                    <div class="imprint-info">
+                        <h3 style="font-family: Noto Sans Bold">Dispute Resolution</h3>                    
+                        <p>
+                            The European Commission provides a platform for online dispute resolution (OS): http://ec.europa.eu/consumers/odr
+                            You can find our e-mail address in the imprint above.
+                            We are not willing or obliged to participate in dispute resolution proceedings before a consumer arbitration board.
+                        </p>
+                    </div>  
+    
+                    <div class="imprint-info">
+                        <h3 style="font-family: Noto Sans Bold">Copyright</h3>
+                        <p>
+                            The layout of our website, the graphics used and the contributions are protected by copyright. Therefore, except for private use, 
+                            the pages may not be taken over, translated, changed, reproduced, stored in electronic or other form or processed or used in any other way, 
+                            either in whole or in part, without our express permission.
+                        </p>
+                    </div>  
+    
+                    <div class="imprint-info">
+                        <h3 style="font-family: Noto Sans Bold">Disclaimer</h3>
+                        <p>
+                            All information on this server is provided without guarantee of accuracy. Under no circumstances will liability be accepted 
+                            for damages resulting from the use of the information retrieved. According to §§8 to 10 TMG we are not obligated as a service 
+                            provider to monitor transmitted or stored foreign information or to investigate circumstances that indicate illegal activity.
+                        </p>
+                    </div>  
+    
+                    <div class="imprint-info">
+                        <h3 style="font-family: Noto Sans Bold">Notice of liability for links</h3>
+                        <p>
+                            We have no influence whatsoever on the design and content of the linked pages and therefore accept no responsibility 
+                            for them. The operators of the linked sites are solely responsible for their content. A continuous control of the contents 
+                            of the linked pages is not possible. In case of information about possible legal violations on linked pages, links will be 
+                            removed if necessary.
+                        </p>
+                    </div>  
+    
+                    <div class="imprint-info">
+                        <h3 style="font-family: Noto Sans Bold">
+                            The imprint applies to the website of the Oktoberfest as an event of the Department of Labor and Economic Affairs of the City of 
+                            Munich and its social media.
+                        </h3>
+                    </div>  
+                </div>
+            </section>
+        </main>
+        
+    
+        <footer>
+            <div id="page-footer">
+                <p id="page-footer-text">
+                    I do not own the rights to any images or information contained in this page. All rights reserved to the owner(s) and author(s)
+                    of the original website:
+                </p> 
+                <a href="https://www.oktoberfest.de/en">The OFFICIAL Oktoberfest München website</a> 
+                <p id="copyright-text">- &copy; 2023 Landeshauptstadt München</p>
+            </div>
+        </footer>
+
+    </body>
