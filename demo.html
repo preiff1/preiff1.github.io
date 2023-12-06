@@ -1,0 +1,22 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hover Example</title>
+    <!-- Your CSS styles or other meta tags -->
+</head>
+<body>
+    <p>Hover over elements to see console output.</p>
+    <div id="output"></div>
+
+    <!-- Your HTML content -->
+
+    <script>
+        document.addEventListener('mouseover', function(event) {
+            const hoveredElement = event.target;
+            // Display the tag name of the hovered element in the #output div
+            const outputDiv = document.getElementById('output');
+            outputDiv.textContent = `Hovered Element: ${hoveredElement.tagName}`;
+        });
+    </script>
+</body>
+</html>

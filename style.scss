@@ -1,0 +1,11 @@
+@import "bower_components/text-hover-effects/sass/effects";
+
+.hover-nav { 
+    @include transition-opt(
+        $transition-color: #FFF,
+        $transition-speed: .3s,
+        $transition-easing: ease-in-out,
+    );
+    @include fill-right;
+}
+

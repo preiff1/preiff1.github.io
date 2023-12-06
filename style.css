@@ -1,159 +1,227 @@
+/* Reset default values */
 * {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;
-    font-size: 100%;
-    vertical-align: baseline;
-    background: transparent;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
 }
 
 /* Setting common styles */
 html {
-    background: black;
+  background: black;
+  color:white;
 }
+
+/* Font imports */
+@font-face {
+  font-family: "League Spartan Bold";
+  src: url('fonts/league-spartan/LeagueSpartan-Bold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: "Sk Modernist";
+  src: url('fonts/Sk-Modernist/Sk-Modernist-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: "Noto Sans Regular";
+  src: url('fonts/notosans/NotoSans-Regular.ttf') format('truetype');
+}
+
+/*** Nav bar hover effect ***/
+/**** This is not my code (1.0 of ajnsckjan) ****/
+.hover-nav {
+  display: inline;
+  position: relative;
+  z-index: 2;
+  text-decoration: none;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  padding: 10px 10px 5px 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  transition: color 0.5s ease-in-out;
+  /* backward transition */
+  /* backward transition */
+}
+.hover-nav:hover, .hover-nav:focus {
+  outline: 0;
+  color: #000000;
+  transition: color 0.5s ease-in-out;
+  cursor: pointer;
+}
+.hover-nav:before {
+  transition: all 0.5s ease-in-out 0s;
+}
+.hover-nav:after {
+  transition: all 0.5s ease-in-out 0s;
+}
+.hover-nav:hover:after, .hover-nav:focus:after {
+  outline: 0;
+  background-color: #FFF;
+  transition: all 0.5s ease-in-out 0s;
+}
+.hover-nav:hover:before, .hover-nav:focus:before {
+  outline: 0;
+  background-color: #FFF;
+  transition: all 0.3s ease-in-out 0s;
+}
+.hover-nav:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 3px;
+  height: 100%;
+}
+.hover-nav:hover:before, .hover-nav:focus:before {
+  width: 100%;
+  height: 100%;
+}
+.hover-nav:hover {
+  color: #000000 !important;
+}
+.hover-nav:before {
+  top: 0%;
+  left: 0;
+}
+/****                   ****/
+/*** End borrowed code ***/
+
 
 /* Styling the navigation bar */
-#navbar {
-    display: flex;
-    position: relative;
-    top: 25px;
-    margin-left: 50px;
+nav ul li {
+  display:inline-block;
+  margin: 48px 0px 0px 60px;
 }
 
-#nav-text {
-    display: flex;
-    gap: 50px;
-    font-size: 26px;
-}
-
-#nav-text a {
-    text-decoration: none;
-    color: white;
-}
-
-#nav-text a:hover {
-    text-decoration: underline 1px white;
-    text-underline-offset: 6px;
+nav ul li a {
+  font-size:26px;
+  font-family:"Sk Modernist";
+  color: white;
 }
 
 /* Styles for the home page */
 #home-title-container {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    top: 150px;
-    align-items: center;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 150px;
+  align-items: center;
+  text-align: center;
 }
 
 #home-title-head {
-    font-size: 100px;
-    color: white;
-}
-
-#home-title-body {
-    font-size: 30px;
-    color:white;
+  font-size: 100px;
+  font-family:"League Spartan Bold";
+  color: white;
 }
 
 #home-main-text {
-    width: 75%;
+  width: 75%;
 }
 
 #home-main-text p {
-    font-size: 20px;
+  font-size: 20px;
 }
 
 /* Styles for the about page */
 #about-text-container {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    top: 120px;
-    margin: 0 auto;
-    width: 75%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 120px;
+  margin: 0 auto;
+  width: 75%;
 }
 
 #about-text-title {
-    font-size: 72px;
-    color: white;
-    margin-bottom: 5px;
+  font-size: 72px;
+  color: white;
+  margin-bottom: 5px;
 }
 
 #about-text-body {
-    font-size: 26px;
-    color: white;
+  font-size: 26px;
+  color: white;
 }
 
 #about-column-container {
-    display: flex;
-    position: relative;
-    top: 248px;
-    width: 80%;
-    margin: 0 auto;
-    padding-bottom: 50px;
+  display: flex;
+  position: relative;
+  top: 248px;
+  width: 80%;
+  margin: 0 auto;
+  padding-bottom: 50px;
 }
 
 .about-column-item {
-    flex: 1;
-    display: flex;
-    justify-content: flex-start;
-    text-align: center;
-    align-items: center;
-    position: relative;
-    flex-direction: column;
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  text-align: center;
+  align-items: center;
+  position: relative;
+  flex-direction: column;
 }
 
 .about-column-item:nth-child(2) {
-    margin: 0 50px;
+  margin: 0 50px;
 }
 
 .about-column-item h1,
 .about-column-item p {
-    color: white;
-    font-size: 20px;
-    width: 80%;
+  color: white;
+  font-size: 20px;
+  width: 80%;
 }
 
 .about-column-item img {
-    width: 100%;
-    max-height: 200px;
-    margin: 25px 0;
-    border: solid 2px whitesmoke;
+  width: 100%;
+  max-height: 200px;
+  margin: 25px 0;
+  border: solid 2px whitesmoke;
 }
 
 /* Styles for the web projects page */
 #projects-container {
-    display: flex;
-    position: relative;
-    top: 80px;
-    width: 80%;
-    margin: 0 auto;
+  display: flex;
+  position: relative;
+  top: 80px;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .projects-container-item {
-    flex: 1;
-    display: flex;
-    justify-content: flex-start;
-    text-align: center;
-    align-items: center;
-    position: relative;
-    flex-direction: column;
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  text-align: center;
+  align-items: center;
+  position: relative;
+  flex-direction: column;
 }
 
 .projects-container-item h1 {
-    display: inline-block;
-    padding: 0 20px 3px 20px;
-    border-bottom: 5px solid white;
-    font-size: 60px;
-    color: white;
+  display: inline-block;
+  padding: 0 20px 3px 20px;
+  border-bottom: 5px solid white;
+  font-size: 60px;
+  color: white;
 }
 
 .projects-container-item a {
-    text-decoration: none;
-    color: gold;
-    font-size: 26px;
-    margin-top: 25px;
+  text-decoration: none;
+  color: gold;
+  font-size: 26px;
+  margin-top: 25px;
 }
 
