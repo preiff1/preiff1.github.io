@@ -9,20 +9,34 @@
     <body>
         <div>
             <nav id="navbar">
-                <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
                 <ul id="nav-text">
-                  <li><a href="index.html" class="hover-nav">Home</a></li>
-                  <li><a href="about.html" class="hover-nav">About</a></li>
-                  <li><a href="projects.html" class="hover-nav">Projects</a></li>
-                  <li><a href="#" class="hover-nav">Contact & Forms</a></li>
+                  <li><a href="index.html" class="hover-nav drop-in">Home</a></li>
+                  <li><a href="about.html" class="hover-nav drop-in">About</a></li>
+                  <li><a href="projects.html" class="hover-nav drop-in">Projects</a></li>
+                  <li><a href="contact.html" class="hover-nav drop-in">Contact & Forms</a></li>
                 </ul>
             </nav>
         </div>
 
-        <div id="home-title-container">
-            <p id="home-title-head">Hi, I'm Parker Reiff.</p>
+        <div class="home-container">
+            <div class="drop-container">
+                <div class="overflow-hidden">
+                    <h1 class="header drop-in-2">Welcome.</h1>
+                </div>
+                <div class="overflow-hidden">
+                    <p class="drop-in-3">
+                       Take your time, enjoy the menu if you'd like.
+                    </p>
+                </div>
+            </div>
+            <div id="cursor-tracker">
+                <canvas></canvas>
+            </div>
         </div>
 
-    
+        <span id="skip-button">Press <span class='enter-border'>Enter</span> to skip animation.</span>
+            
+        </div>
+        <script src="scripts.js"></script>
     </body>
 </html>

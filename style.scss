@@ -4,7 +4,7 @@
     @include transition-opt(
         $transition-color: #FFF,
         $transition-speed: .3s,
-        $transition-easing: ease-in-out,
+        $transition-easing: ease-in-out
     );
     @include fill-right;
 }

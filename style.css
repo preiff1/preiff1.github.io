@@ -11,8 +11,13 @@
 
 /* Setting common styles */
 html {
-  background: black;
-  color:white;
+  background: white;
+}
+
+body, html {
+  padding: 0;
+  margin: 0;
+  overscroll-behavior: none;
 }
 
 /* Font imports */
@@ -27,6 +32,11 @@ html {
 }
 
 @font-face {
+  font-family: "Noto Sans Bold";
+  src: url('fonts/notosans/NotoSans-Bold.ttf') format('truetype');
+}
+
+@font-face {
   font-family: "Noto Sans Regular";
   src: url('fonts/notosans/NotoSans-Regular.ttf') format('truetype');
 }
@@ -35,7 +45,6 @@ html {
 /**** This is not my code (1.0 of ajnsckjan) ****/
 .hover-nav {
   display: inline;
-  position: relative;
   z-index: 2;
   text-decoration: none;
   box-sizing: border-box;
@@ -46,7 +55,7 @@ html {
   user-select: none;
   -webkit-touch-callout: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  padding: 10px 10px 5px 10px;
+  padding: 5px 10px 5px 10px;
   white-space: nowrap;
   overflow: hidden;
   transition: color 0.5s ease-in-out;
@@ -67,12 +76,12 @@ html {
 }
 .hover-nav:hover:after, .hover-nav:focus:after {
   outline: 0;
-  background-color: #FFF;
+  background-color: #000000;
   transition: all 0.5s ease-in-out 0s;
 }
 .hover-nav:hover:before, .hover-nav:focus:before {
   outline: 0;
-  background-color: #FFF;
+  background-color: #000000;
   transition: all 0.3s ease-in-out 0s;
 }
 .hover-nav:before {
@@ -87,7 +96,7 @@ html {
   height: 100%;
 }
 .hover-nav:hover {
-  color: #000000 !important;
+  color: #FFF !important;
 }
 .hover-nav:before {
   top: 0%;
@@ -96,99 +105,148 @@ html {
 /****                   ****/
 /*** End borrowed code ***/
 
-
+#nav-text {
+  align-items:center;
+  justify-content:center;
+}
 /* Styling the navigation bar */
 nav ul li {
-  display:inline-block;
-  margin: 48px 0px 0px 60px;
+  display:inline-flex;
+  position:relative;
+  margin: 48px 0px 0px 48px;
 }
 
 nav ul li a {
   font-size:26px;
   font-family:"Sk Modernist";
-  color: white;
+  color: #000000;
 }
 
 /* Styles for the home page */
-#home-title-container {
+.drop-container {
   display: flex;
-  flex-direction: column;
   position: relative;
-  top: 150px;
-  align-items: center;
-  text-align: center;
+  margin:312px 0 0 60px;
+  flex-direction:column;
 }
 
-#home-title-head {
-  font-size: 100px;
-  font-family:"League Spartan Bold";
-  color: white;
+#home-container {
+  position: relative;
 }
 
-#home-main-text {
-  width: 75%;
+#cursor-tracker {
+  position: absolute;
+  top: 0%; 
+  left: 0%; 
+  z-index:-999;
 }
 
-#home-main-text p {
-  font-size: 20px;
+.header {
+  font-size: 136px;
+  font-family: "Noto Sans Bold";
+  user-select:none;
+}
+ 
+.drop-container p {
+  width:fit-content;
+  font-size: 40px;
+  background-color:#000000;
+  padding: 0 10px 5px 10px;
+  color:#FFF;
+  margin: -2px 0 0 10px;
+  font-family: "Noto Sans Regular";
+  user-select:none;
+}
+
+.drop-in {
+  animation: drop-in 5s ease 6000ms backwards;
+}
+.drop-in-2 {
+  animation: drop-in 5s ease 600ms backwards;
+}
+ 
+.drop-in-3 {
+  animation: drop-in 5s ease 4200ms backwards;
+}
+ 
+@keyframes drop-in {
+  from {
+   opacity: 0;
+   transform: translateY(-38px);
+  }
+  to {
+   opacity: 1;
+   transform: translate(0px);
+  }
+}
+
+#skip-button {
+  position:fixed;
+  bottom:60px;
+  right:60px;
+  color: #000000;
+  font-size:16px;
+  font-family: "Noto Sans Regular";
+  user-select:none;
+}
+
+.enter-border {
+  border: solid 0.5px #000000;
+  border-radius: 10%;
+  padding: 0 1.5px 0 0.5px;
 }
 
 /* Styles for the about page */
-#about-text-container {
+#about-title-container {
   display: flex;
   flex-direction: column;
   position: relative;
-  top: 120px;
-  margin: 0 auto;
+  margin: 72px auto;
   width: 75%;
 }
 
-#about-text-title {
+#about-title-header {
   font-size: 72px;
-  color: white;
+  font-family:"Noto Sans Bold";
+  color: #000000;
   margin-bottom: 5px;
 }
 
-#about-text-body {
+#about-title-body {
   font-size: 26px;
-  color: white;
+  font-family:"Noto Sans Regular";
+  color: #000000;
 }
 
-#about-column-container {
+#about-columns-container {
   display: flex;
-  position: relative;
-  top: 248px;
-  width: 80%;
+  width:90%;
   margin: 0 auto;
-  padding-bottom: 50px;
 }
 
-.about-column-item {
+.about-entry {
   flex: 1;
-  display: flex;
-  justify-content: flex-start;
+  margin: 10px;
+  padding:10px;
   text-align: center;
-  align-items: center;
-  position: relative;
-  flex-direction: column;
 }
 
-.about-column-item:nth-child(2) {
+.about-entry:nth-child(2) {
   margin: 0 50px;
 }
 
-.about-column-item h1,
-.about-column-item p {
-  color: white;
-  font-size: 20px;
-  width: 80%;
+.about-entry h1,
+.about-entry p {
+  color: #000000;
+  font-family:"Noto Sans Regular";
+  font-size: 18px;
 }
 
-.about-column-item img {
-  width: 100%;
-  max-height: 200px;
-  margin: 25px 0;
-  border: solid 2px whitesmoke;
+.about-entry img {
+  width:100%;
+  height:auto;
+  margin:25px 0;
+  border:2px solid #FFF;
 }
 
 /* Styles for the web projects page */
