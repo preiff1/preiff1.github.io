@@ -1,0 +1,29 @@
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  font-size: 96px;
+  color: #ccc;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: all 1s ease-in-out;
+  position: relative;
+}
+p::before {
+  content: attr(data-item);
+  transition: all 1s ease-in-out;
+  color: #8254ff;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 0;
+  overflow: hidden;
+}
+p:hover::before {
+  width: 100%;
+}

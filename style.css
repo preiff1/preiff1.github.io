@@ -6,181 +6,171 @@
   outline: 0;
   font-size: 100%;
   vertical-align: baseline;
+  line-height:1;
   background: transparent;
-}
-
-/* Setting common styles */
-html {
-  background: white;
-}
-
-body, html {
+  }
+  
+  /* Setting common styles */
+  html {
+  background: #FFF;
+  }
+  body, html {
   padding: 0;
   margin: 0;
   overscroll-behavior: none;
-}
-
-/* Font imports */
-@font-face {
-  font-family: "League Spartan Bold";
-  src: url('fonts/league-spartan/LeagueSpartan-Bold.otf') format('opentype');
-}
-
-@font-face {
+  }
+  
+  /* Font imports */
+  @font-face {
   font-family: "Sk Modernist";
   src: url('fonts/Sk-Modernist/Sk-Modernist-Regular.otf') format('opentype');
-}
-
-@font-face {
+  }
+  @font-face {
   font-family: "Noto Sans Bold";
   src: url('fonts/notosans/NotoSans-Bold.ttf') format('truetype');
-}
-
-@font-face {
+  }
+  @font-face {
   font-family: "Noto Sans Regular";
   src: url('fonts/notosans/NotoSans-Regular.ttf') format('truetype');
-}
+  }
 
-/*** Nav bar hover effect ***/
-/**** This is not my code (1.0 of ajnsckjan) ****/
-.hover-nav {
+  /*** Nav bar hover effect ***/
+  /**** This is not my code (1.0 of ajnsckjan) ****/
+  .hover-nav {
   display: inline;
-  z-index: 2;
+  z-index: 1;
   text-decoration: none;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -webkit-user-select: none;
-  -moz-user-select: none;
+  box-sizing:border-box;
   user-select: none;
-  -webkit-touch-callout: none;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  padding: 5px 10px 5px 10px;
+  padding: 5px 8px 10px 10px;
   white-space: nowrap;
-  overflow: hidden;
-  transition: color 0.5s ease-in-out;
+  overflow:hidden;
+  border-radius:16px;
+  transition: color 0.2s ease-in-out;
+  position:relative;
   /* backward transition */
   /* backward transition */
-}
-.hover-nav:hover, .hover-nav:focus {
+  }
+  .hover-nav:hover, .hover-nav:focus {
   outline: 0;
   color: #000000;
-  transition: color 0.5s ease-in-out;
-  cursor: pointer;
-}
-.hover-nav:before {
-  transition: all 0.5s ease-in-out 0s;
-}
-.hover-nav:after {
-  transition: all 0.5s ease-in-out 0s;
-}
-.hover-nav:hover:after, .hover-nav:focus:after {
+  transition: color 0.2s ease-in-out;
+  cursor:pointer;
+  }
+  .hover-nav:before,
+  .hover-nav:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  border-radius: 16px; 
+  transition: all 0.2s ease-in-out 0s;
+  }
+  .hover-nav:hover:after, .hover-nav:focus:after {
   outline: 0;
   background-color: #000000;
-  transition: all 0.5s ease-in-out 0s;
-}
-.hover-nav:hover:before, .hover-nav:focus:before {
+  transition: all 0.2s ease-in-out 0s;
+  }
+  .hover-nav:hover:before, .hover-nav:focus:before {
   outline: 0;
   background-color: #000000;
-  transition: all 0.3s ease-in-out 0s;
-}
-.hover-nav:before {
+  transition: all 0.2s ease-in-out 0s;
+  }
+  .hover-nav:before {
   content: "";
   position: absolute;
   z-index: -1;
   width: 3px;
   height: 100%;
-}
-.hover-nav:hover:before, .hover-nav:focus:before {
+  }
+  .hover-nav:hover:before, .hover-nav:focus:before {
   width: 100%;
   height: 100%;
-}
-.hover-nav:hover {
+  }
+  .hover-nav:hover {
   color: #FFF !important;
-}
-.hover-nav:before {
+  }
+  .hover-nav:before {
   top: 0%;
   left: 0;
-}
-/****                   ****/
-/*** End borrowed code ***/
+  }
+  /**** ****/
+  /*** End borrowed code ***/
+  
 
-#nav-text {
-  align-items:center;
-  justify-content:center;
-}
-/* Styling the navigation bar */
-nav ul li {
+
+  /* Styling the navigation bar */
+  nav ul li {
   display:inline-flex;
   position:relative;
   margin: 48px 0px 0px 48px;
-}
-
-nav ul li a {
+  }
+  nav ul li a {
   font-size:26px;
   font-family:"Sk Modernist";
+  letter-spacing:1px;
   color: #000000;
-}
-
-/* Styles for the home page */
-.drop-container {
+  }
+  
+  /* Styles for the home page */
+  .drop-container {
   display: flex;
   position: relative;
   margin:312px 0 0 60px;
   flex-direction:column;
-}
-
-#home-container {
-  position: relative;
-}
-
-#cursor-tracker {
+  }
+  #cursor-tracker {
   position: absolute;
-  top: 0%; 
-  left: 0%; 
-  z-index:-999;
-}
-
-.header {
+  top: 0%;
+  left: 0%;
+  z-index:-1;
+  }
+  .header {
   font-size: 136px;
   font-family: "Noto Sans Bold";
+  color: #000000;
   user-select:none;
-}
- 
-.drop-container p {
+  }
+  .drop-container p {
   width:fit-content;
-  font-size: 40px;
+  font-size: 36px;
   background-color:#000000;
-  padding: 0 10px 5px 10px;
+  border-radius: 16px;
   color:#FFF;
-  margin: -2px 0 0 10px;
+  padding: 8px 8px 12px 12px;
+  margin: 10px 0 0 10px;
   font-family: "Noto Sans Regular";
   user-select:none;
-}
-
-.drop-in {
-  animation: drop-in 5s ease 6000ms backwards;
-}
-.drop-in-2 {
-  animation: drop-in 5s ease 600ms backwards;
-}
- 
-.drop-in-3 {
-  animation: drop-in 5s ease 4200ms backwards;
-}
- 
-@keyframes drop-in {
+  }
+  .drop-in-nav {
+  animation: drop-in-title-nav 2.5s ease 5600ms backwards;
+  }
+  .drop-in-title {
+  animation: drop-in-title-nav 2.5s ease 600ms backwards;
+  }
+  .drop-in-subtitle {
+  animation: drop-in-subtitle 2.5s ease 3100ms backwards;
+  }
+  @keyframes drop-in-title-nav {
   from {
-   opacity: 0;
-   transform: translateY(-38px);
+  opacity: 0;
+  transform: translateY(-15px);
   }
   to {
-   opacity: 1;
-   transform: translate(0px);
+  opacity: 1;
+  transform: translate(0px);
   }
-}
-
-#skip-button {
+  }
+  @keyframes drop-in-subtitle {
+  from {
+  opacity: 0;
+  transform: translateY(-10px);
+  }
+  to {
+  opacity: 1;
+  transform: translate(0px);
+  }
+  }
+  #skip-button {
   position:fixed;
   bottom:60px;
   right:60px;
@@ -188,98 +178,248 @@ nav ul li a {
   font-size:16px;
   font-family: "Noto Sans Regular";
   user-select:none;
-}
-
-.enter-border {
-  border: solid 0.5px #000000;
+  opacity: 0;
+  transition: opacity 1s ease;
+  }
+  #skip-button.fade-in {
+  opacity: 1;
+  }
+  .skip-enter-border {
+  border: solid 1px #000000;
   border-radius: 10%;
-  padding: 0 1.5px 0 0.5px;
-}
-
-/* Styles for the about page */
-#about-title-container {
+  padding: 0 2.5px 0.5px 1.5px;
+  }
+  
+  /* Styles for the about page */
+  #about-title-container {
   display: flex;
-  flex-direction: column;
-  position: relative;
-  margin: 72px auto;
-  width: 75%;
-}
-
-#about-title-header {
-  font-size: 72px;
+  margin:80px 0 0 75px;
+  user-select:none;
+  }
+  #about-header {
+  font-size: 256px;
   font-family:"Noto Sans Bold";
   color: #000000;
-  margin-bottom: 5px;
-}
-
-#about-title-body {
-  font-size: 26px;
-  font-family:"Noto Sans Regular";
+  }
+  #about-subheader {
+  font-size:93px;
+  margin: 28px 0 0 25px;
+  font-family: "Noto Sans Bold";
   color: #000000;
-}
-
-#about-columns-container {
-  display: flex;
-  width:90%;
-  margin: 0 auto;
-}
-
-.about-entry {
-  flex: 1;
-  margin: 10px;
-  padding:10px;
-  text-align: center;
-}
-
-.about-entry:nth-child(2) {
-  margin: 0 50px;
-}
-
-.about-entry h1,
-.about-entry p {
+  }
+  #about-title-body {
+  position:relative;
+  font-size: 30px;
+  font-family:"Sk Modernist";
   color: #000000;
-  font-family:"Noto Sans Regular";
-  font-size: 18px;
-}
+  margin:20px 0 0 96.50px;
+  }
 
-.about-entry img {
-  width:100%;
-  height:auto;
-  margin:25px 0;
-  border:2px solid #FFF;
-}
+  #about-sec-college .about-section,
+  #about-sec-chess .about-section{
+    margin-left:80px;
+  }
 
-/* Styles for the web projects page */
-#projects-container {
+  #about-sec-music .about-section {
+    text-align: right; /* Align the section content to the right */
+    margin-right: 80px; /* Create space on the right side */
+  }
+
+  #about-sec-music p {
+    margin-left:205px;
+  }
+  #about-sec-chess {
+    padding-bottom: 200px;
+  }
+  .about-section
+   {
+    padding-top:500px;
+  }
+  .about-section p {
+    margin-top:25px;
+    font-family:"Sk Modernist";
+    letter-spacing: 1px;
+    font-size:36px;
+    width:85%;
+  }
+
+  .about-sec-title {
+    font-family:"Noto Sans Bold";
+    font-size:72px;
+    user-select:none;
+  }
+
+  /* Styles for the web projects page */
+  .projects-section {
   display: flex;
+  flex-direction:column;
   position: relative;
-  top: 80px;
-  width: 80%;
-  margin: 0 auto;
-}
-
-.projects-container-item {
-  flex: 1;
-  display: flex;
-  justify-content: flex-start;
-  text-align: center;
-  align-items: center;
-  position: relative;
-  flex-direction: column;
-}
-
-.projects-container-item h1 {
+  margin: 96px 0 0 84px;
+  }
+  
+  .projects-section h1 {
   display: inline-block;
-  padding: 0 20px 3px 20px;
-  border-bottom: 5px solid white;
+  width:fit-content;
+  border: 7px solid #000000;
+  padding:15px;
+  user-select: none;
   font-size: 60px;
-  color: white;
-}
-
-.projects-container-item a {
+  font-family:"Noto Sans Bold";
+  color: #000000;
+  padding-bottom: 15px;
+  }
+  
+  .projects-section a {
   text-decoration: none;
-  color: gold;
-  font-size: 26px;
-  margin-top: 25px;
+  color: #000000;
+  width:fit-content;
+  font-family: "Sk Modernist";
+  letter-spacing: 1px;
+  font-size: 34px;
+  margin: 25px 0;
+  }
+
+  .hyphen-list {
+    list-style:none;
+    margin-left:10px;
+  }
+
+  .hyphen-list li:before {
+    content: "- ";
+    font-size:34px;
+  }
+  
+
+/* Contact page */
+
+#contact-title {
+  display:flex;
+  flex-direction:column;
+  position:relative;
+  margin:120px 0  0 80px;
 }
 
+#contact-title h1 {
+  font-size: 96px;
+  font-family:"Noto Sans Bold";
+}
+
+#contact-title p {
+  margin:24px 0 0 8px;
+  font-size: 39px;
+  font-family:"Sk Modernist";
+  letter-spacing: 1px;
+}
+
+#contact-container {
+  display:flex;
+  position:relative;
+  margin:60px 0 0 100px;
+  align-items:center;
+}
+
+#contact-and-image {
+  display:flex;
+  margin-top:20px;
+  align-items:center;
+}
+
+#contact-and-image img {
+  width:100px;
+}
+
+.rotate-phone-icon {
+  transform:rotate(30deg);
+  transform-origin:center;
+}
+.space-mail-left {
+  margin-left:100px;
+}
+
+.recenter-email-text {
+  margin-bottom:10px;
+}
+
+#contact-and-image p {
+  font-family:"Sk Modernist";
+  font-size:34px;
+  text-align:center;
+  letter-spacing:1px;
+  margin-left: 40px;
+}
+
+#documents-container {
+  display:flex;
+  position:relative;
+  flex-direction:column;
+  margin:120px 0 0 80px;
+}
+
+#documents-container h1 {
+  font-size: 96px;
+  font-family:"Noto Sans Bold";
+}
+
+#documents-list {
+  list-style:none;
+  margin:25px 0 100px 16px;
+}
+
+#documents-list li:before {
+  content: '- ';
+  font-size:34px;
+}
+
+#documents-list a {
+  text-decoration:none;
+  color:#000000;
+  font-family:"Sk Modernist";
+  font-size:34px;
+  letter-spacing:1px;
+}
+
+/* Resources page */
+#resources-title {
+  display:flex;
+  flex-direction:column;
+  position:relative;
+  margin:120px 0  0 80px;
+}
+
+#resources-title h1 {
+  font-size: 96px;
+  font-family:"Noto Sans Bold";
+}
+
+#resources-title p {
+  margin:36px 0 0 8px;
+  font-size: 36px;
+  font-family:"Noto Sans Regular";
+  width:75%
+}
+
+#resources-container {
+  display:flex;
+  position:relative;
+  flex-direction: column;
+  margin:50px 0 0 90px;
+}
+
+.resources-item {
+  margin-bottom:50px;
+}
+
+.resources-item a {
+  font-size: 34px;
+  font-family:"Noto Sans Bold";
+  text-decoration:none;
+  color:#000000;
+}
+
+.resources-item p {
+  margin:8px 0;
+  font-size: 20px;
+  font-family:"Sk Modernist";
+  letter-spacing:1px;
+  width:67%
+}
