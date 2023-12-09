@@ -79,10 +79,9 @@ nav ul li a {
   background-color: #000000;
   border-radius: 16px;
   color: #FFF;
-  padding: 8px 12px 14px 12px;
+  padding: 8px 8px 12px 12px;
   margin: 10px 0 0 10px;
-  font-family: "Sk Modernist";
-  letter-spacing:1px;
+  font-family: "Noto Sans Regular";
   user-select: none;
 }
 
