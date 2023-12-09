@@ -26,11 +26,6 @@ body {
   src: url('fonts/notosans/NotoSans-Bold.ttf') format('truetype');
 }
 
-@font-face {
-  font-family: "Noto Sans Regular";
-  src: url('fonts/notosans/NotoSans-Regular.ttf') format('truetype');
-}
-
 /* Styling the nav bar */
 nav ul li {
   display: inline-flex;
@@ -342,7 +337,7 @@ nav ul li a {
 #resources-title p {
   margin: 36px 0 0 8px;
   font-size: 36px;
-  font-family: "Noto Sans Regular";
+  font-family: "Sk Modernist";
   width: 75%
 }
 
