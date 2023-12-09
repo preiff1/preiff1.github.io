@@ -1,13 +1,10 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-    const element = document.getElementById('skip-button');
-    element.classList.add('fade-in'); 
-
-    
+    /* Borrowed code (mouse trail) - see colophon */
     const canvas = document.querySelector("canvas");
     const ctx = canvas.getContext('2d');
 
-    // for intro motion
+    
     let mouseMoved = false;
 
     const pointer = {
@@ -97,35 +94,36 @@ document.addEventListener('DOMContentLoaded', function () {
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
     }
+    /* End borrowed code */
 
-    function cancelAnimationAndHide() {
-        const animations = document.querySelectorAll
-            ('.drop-in-nav, .drop-in-title, .drop-in-subtitle');
-        const skipButton = document.getElementById('skip-button');
+    /* Skip button for home animations */
+    const element = document.getElementById('skip-message');
+    element.style.opacity = 1 ; // Add fade-in effect with css
 
-        animations.forEach(anim => {
-            anim.style.animation = 'none';
+    function skipHomeAnimations() {
+        const homeAnimations = document.querySelectorAll
+            ('.drop-in-nav, .drop-in-title, .drop-in-subtitle'); //Grab home animations
+        const skipMessage = document.getElementById('skip-message');
+
+        homeAnimations.forEach(anim => {
+            anim.style.animation = 'none'; //Cancel animations
         });
 
-        skipButton.style.opacity = '0'; // Fade out by changing opacity
-        setTimeout(() => {
-            skipButton.style.display = 'none'; // Hide after fade-out effect
-        }, 500);
+        skipMessage.style.opacity = 0; // Add fade-out effect
+
     }
-    document.addEventListener('keydown', function (event) {
-        let animationTimer; // Variable to store the setTimeout reference
-
+    document.addEventListener('keydown', function (event) { //Listen for Enter press
         if (event.key === 'Enter') {
-            clearTimeout(animationTimer); // Clear the timeout if Enter is pressed
-
-            // Cancel animations and hide skip button on Enter press
-            cancelAnimationAndHide();
+            skipHomeAnimations();
         }
     });
 
-    const timeoutDuration = 8100; // Adjust this value to the same duration used in the keydown event listener
-    setTimeout(cancelAnimationAndHide, timeoutDuration);
+    function skipFadeOnTimeout () {
+        const skipMessage = document.getElementById('skip-message');
+        skipMessage.style.opacity = 0;
+    }
 
+    const timeoutDuration = 8100; 
+    setTimeout(skipFadeOnTimeout, timeoutDuration); //If enter not pressed in time, skip button fades out
 });
-
 

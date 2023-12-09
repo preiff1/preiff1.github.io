@@ -1,65 +1,59 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="style.css" type="text/css">
-        <link rel="stylesheet" href="sass-css.css" type="text/css">
 
-        <title>Parker Reiff - Projects</title>
-    </head>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>Parker Reiff - Projects</title>
+</head>
 
-    <body>
+<body>
 
-        <div>
-            <nav id="navbar">
-                <ul id="nav-text">
-                  <li><a href="index.html" class="hover-nav">Home</a></li>
-                  <li><a href="about.html" class="hover-nav">About</a></li>
-                  <li><a href="projects.html" class="hover-nav">Projects</a></li>
-                  <li><a href="contact.html" class="hover-nav">Contact & Docs</a></li>
-                  <li><a href="colophon.html" class="hover-nav">Resources</a></li>
-                </ul>
-            </nav>
-        </div>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="hover-nav">Home</a></li>
+                <li><a href="about.html" class="hover-nav">About</a></li>
+                <li><a href="projects.html" class="hover-nav">Projects</a></li>
+                <li><a href="contact.html" class="hover-nav">Contact & Docs</a></li>
+                <li><a href="colophon.html" class="hover-nav">Resources</a></li>
+            </ul>
+        </nav>
+    </header>
 
-
-        <div id="contact-title">
-            <h1>Let's stay in touch.</h1>
-            <p>You can reach me through either of these mediums:</p>
-        </div>
-
-        <div id="contact-container">
-            <div id="contact-and-image">
-                <img src="images/phone.jpg" class="rotate-phone-icon">
-                <p>(515)-298-0983</p>
+    <main>
+        <section class="contact-section">
+            <div id="contact-title">
+                <h1>Let's stay in touch.</h1>
+                <p>You can reach me through either of these mediums:</p>
             </div>
-            <div id="contact-and-image">
-                <img src="images/mail.jpg" class="space-mail-left">
-                <p class="recenter-email-text">preiff1@yahoo.com</p>
+
+            <div class="contact-info">
+                <div class="contact-method">
+                    <img src="images/mail.jpg" alt="Mail Icon">
+                    <p class="recenter-email">preiff1@yahoo.com</p>
+                </div>
+                <div class="contact-method">
+                    <img src="images/phone.jpg" alt="Phone Icon" class="rotate-and-space-phone">
+                    <p>(515)-298-0983</p>
+                </div>
             </div>
-        </div>
-        
-        
-        
-        
-        <div id ="documents-container">
-            <div id ="documents-title">
+        </section>
+
+        <section id="documents-section">
+            <div id="documents-title">
                 <h1>Documents</h1>
             </div>
-
-            <div id ="doc-list-container">
-                <ul id="documents-list">
+            <div id="document-links">
+                <ul id="document-list">
                     <li>
-                        <a href="resume.pdf"
-                        class="color-change-on-hover"
-                        data-text="Resume">Resume</a>       
+                        <a href="resume.pdf" class="color-change-on-hover" hover-text="Resume">Resume</a>
                     </li>
                 </ul>
             </div>
-        </div>
+        </section>
+    </main>
 
-
-    </body>
-
+</body>
 
 </html>

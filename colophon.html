@@ -1,56 +1,53 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="style.css" type="text/css">
-        <link rel="stylesheet" href="sass-css.css" type="text/css">  
-        <title>Parker Reiff - Portfolio</title>
-    </head>
 
-    <body>
-        <div>
-            <nav id="navbar">
-                <ul id="nav-text">
-                    <li><a href="index.html" class="hover-nav">Home</a></li>
-                    <li><a href="about.html" class="hover-nav">About</a></li>
-                    <li><a href="projects.html" class="hover-nav">Projects</a></li>
-                    <li><a href="contact.html" class="hover-nav">Contact & Docs</a></li>
-                  <li><a href="colophon.html" class="hover-nav">Resources</a></li>
-                </ul>
-            </nav>
-        </div>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>Parker Reiff - Portfolio</title>
+</head>
 
-        <div id="resources-title">
-            <h1>Colophon</h1>
-            <p> 
-                I'd like to give a special shoutout to the amazing programmers 
-                who provided free code for some of the effects in this website.
-            </p>
-        </div>
+<body>
+    <header>
+        <nav>
+            <ul id="nav-links">
+                <li><a href="index.html" class="hover-nav">Home</a></li>
+                <li><a href="about.html" class="hover-nav">About</a></li>
+                <li><a href="projects.html" class="hover-nav">Projects</a></li>
+                <li><a href="contact.html" class="hover-nav">Contact & Docs</a></li>
+                <li><a href="colophon.html" class="hover-nav">Resources</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <div id="resources-container">
-            <div class="resources-item">
+    <main>
+        <section id="resources-section">
+            <div id="resources-title">
+                <h1>Colophon</h1>
+                <p>
+                    I'd like to give a special shoutout to the amazing programmers
+                    who provided free code for some of the effects in this website.
+                </p>
+            </div>
+            <div class="resource-link-and-author">
                 <a href="https://dev.to/uuuuuulala/coding-an-interactive-and-damn-satisfying-cursor-7-simple-steps-2kb-of-code-1c8b"
-                class="color-change-on-hover"
-                data-text="Mouse Trail Effect">
+                    class="color-change-on-hover" hover-text="Mouse Trail Effect">
                     Mouse Trail Effect</a>
                 <p>By Ksenia Kondrashova</p>
             </div>
-
-            <div class="resources-item">
-                <a href="https://codepen.io/tonkec/pen/jWmgqN"
-                class="color-change-on-hover"
-                data-text="Navbar Fills In On Hover">Navbar Fills In On Hover</a>
+            <div class="resource-link-and-author">
+                <a href="https://codepen.io/tonkec/pen/jWmgqN" class="color-change-on-hover"
+                    hover-text="Navbar Fills In On Hover">Navbar Fills In On Hover</a>
                 <p>By Antonija Šimić</p>
             </div>
-
-            <div class="resources-item">
-                <a href="https://codepen.io/jibin2706/pen/dyYjyZG"
-                class="color-change-on-hover"
-                data-text="Text Drops In On Page Load">Text Drops In On Page Load</a>
+            <div class="resource-link-and-author"> 
+                <a href="https://codepen.io/jibin2706/pen/dyYjyZG" class="color-change-on-hover"
+                    hover-text="Text Drops In On Page Load">Text Drops In On Page Load</a>
                 <p>By Jibin Thomas</p>
             </div>
-        </div>
-    </body>
+        </section>
+    </main>
+
+</body>
 
 </html>

@@ -1,47 +1,52 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="style.css" type="text/css">
-        <link rel="stylesheet" href="sass-css.css" type="text/css">
-        <title>Parker Reiff - Projects</title>
-    </head>
 
-    <body>
-        <div>
-            <nav id="navbar">
-                <ul id="nav-text">
-                  <li><a href="index.html" class="hover-nav">Home</a></li>
-                  <li><a href="about.html" class="hover-nav">About</a></li>
-                  <li><a href="projects.html" class="hover-nav">Projects</a></li>
-                  <li><a href="contact.html" class="hover-nav">Contact & Docs</a></li>
-                  <li><a href="colophon.html" class="hover-nav">Resources</a></li>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>Parker Reiff - Projects</title>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <ul id="nav-links">
+                <li><a href="index.html" class="hover-nav">Home</a></li>
+                <li><a href="about.html" class="hover-nav">About</a></li>
+                <li><a href="projects.html" class="hover-nav">Projects</a></li>
+                <li><a href="contact.html" class="hover-nav">Contact & Docs</a></li>
+                <li><a href="colophon.html" class="hover-nav">Resources</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="web-projects-section">
+            <div class="projects-container">
+                <h1>Web Projects</h1>
+                <ul class="project-list">
+                    <li>
+                        <a href="hw04/index.html" class="color-change-on-hover"
+                            hover-text="Oktoberfest Landing Page Recreation">Oktoberfest Landing Page Recreation</a>
+                    </li>
                 </ul>
-            </nav>
-        </div>
-
-        <div class ="projects-section">
-            <h1>Web Projects</h1>
-            <ul class="hyphen-list">
-                <li>
-                    <a href="hw04/index.html" 
-                    class="color-change-on-hover"
-                    data-text="Oktoberfest Landing Page Recreation">Oktoberfest Landing Page Recreation</a>
-                </li>
-
-            </ul>
-        </div>
-
-        <div class="projects-section">
-            <h1>Software Projects</h1>
-            <ul class="hyphen-list">
-                <li>
-                    <a href="#"
-                    class="color-change-on-hover"
-                    data-text="Dummy Software Project">Dummy Software Project</a>
-                </li>
-            </ul>
             </div>
-        </div>
-    </body>
+        </section>
+
+        <section id="software-projects-section">
+            <div class="projects-container">
+                <h1>Software Projects</h1>
+                <ul class="project-list">
+                    <li>
+                        <a href="#" class="color-change-on-hover" hover-text="Dummy Software Project">Dummy Software
+                            Project</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+</body>
+
 </html>
