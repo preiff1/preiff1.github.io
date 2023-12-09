@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', function () {
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
     }
-    /* End borrowed code */
+    /*@ End borrowed code @*/
 
     /* Skip button for home animations */
     const element = document.getElementById('skip-message');
@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     document.addEventListener('keydown', function (event) { //Listen for Enter press
         if (event.key === 'Enter') {
-            skipHomeAnimations();
+            skipHomeAnimations(); //Skip animations if enter pressed
         }
     });
 
